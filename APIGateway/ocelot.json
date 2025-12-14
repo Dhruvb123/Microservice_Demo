@@ -1,6 +1,6 @@
 {
   "Routes": [
-    // Product API
+    // Product API running on Port 5001
     {
       "DownstreamPathTemplate": "/api/products{everything}",
       "DownstreamScheme": "http",
@@ -13,7 +13,7 @@
       "UpstreamPathTemplate": "/api/products{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
-    // CART API
+    // CART API running on PORT 5002
     {
       "DownstreamPathTemplate": "/api/basket{everything}",   // the path which api gateway will hit
       "DownstreamScheme": "http",
