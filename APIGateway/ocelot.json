@@ -1,0 +1,34 @@
+{
+  "Routes": [
+    // Product API
+    {
+      "DownstreamPathTemplate": "/api/products{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/products{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    // CART API
+    {
+      "DownstreamPathTemplate": "/api/basket{everything}",   // the path which api gateway will hit
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cart{everything}",   // the path from frontend on which this reroute will trigger
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "CorrelationId",
+    "BaseURL": "http://localhost:5000"
+  }
+}
