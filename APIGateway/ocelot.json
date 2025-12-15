@@ -15,7 +15,7 @@
     },
     // CART API running on PORT 5002
     {
-      "DownstreamPathTemplate": "/api/basket{everything}",   // the path which api gateway will hit
+      "DownstreamPathTemplate": "/api/basket/{everything}",   // the path which api gateway will hit
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -23,7 +23,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/cart{everything}",   // the path from frontend on which this reroute will trigger
+      "UpstreamPathTemplate": "/api/cart/{everything}",   // the path from frontend on which this reroute will trigger
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
   ],
