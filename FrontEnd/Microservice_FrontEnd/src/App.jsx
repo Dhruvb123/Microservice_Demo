@@ -5,13 +5,14 @@ function App() {
   const [result, setResult] = useState("");
 
   // 🔁 Change this to your API Gateway base URL
-  const API_GATEWAY = "http://localhost:5000";
+  const API_GATEWAY = "http://localhost:5000/api";
 
   const callApi = async (endpoint) => {
     try {
       setResult("Loading...");
       const res = await fetch(`${API_GATEWAY}${endpoint}`);
-      const data = await res.text(); // simple string responses
+      // console.log(res);
+      const data = await res.text();
       setResult(data);
     } catch (err) {
       setResult("Error calling API");
@@ -31,21 +32,29 @@ function App() {
         {/* Product APIs */}
         <div className="api-box">
           <h2>📦 Product API</h2>
-          <button onClick={() => callApi("/product/get-all")}>
+          <button onClick={() => callApi("/products/getHomeProducts")}>
             Get Products
           </button>
-          <button onClick={() => callApi("/product/1")}>
+          <button onClick={() => callApi("/products/getSpecificProduct")}>
             Get Product By ID
           </button>
-          <button onClick={() => callApi("/product/add")}>Add Product</button>
+          <button onClick={() => callApi("/products/addProduct")}>
+            Add Product
+          </button>
         </div>
 
         {/* Order APIs */}
         <div className="api-box">
           <h2>🛒 Order API</h2>
-          <button onClick={() => callApi("/order/create")}>Create Order</button>
-          <button onClick={() => callApi("/order/payment")}>Payment</button>
-          <button onClick={() => callApi("/order/tracking")}>Tracking</button>
+          <button onClick={() => callApi("/checkout/createorder")}>
+            Create Order
+          </button>
+          <button onClick={() => callApi("/checkout/paymentmethod")}>
+            Payment
+          </button>
+          <button onClick={() => callApi("/checkout/trackorder")}>
+            Tracking
+          </button>
         </div>
       </div>
 

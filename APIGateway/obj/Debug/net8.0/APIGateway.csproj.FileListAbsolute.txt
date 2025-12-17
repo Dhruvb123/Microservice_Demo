@@ -41,3 +41,4 @@ E:\.NET Project\Microservice_Demo\APIGateway\obj\Debug\net8.0\refint\APIGateway.
 E:\.NET Project\Microservice_Demo\APIGateway\obj\Debug\net8.0\APIGateway.pdb
 E:\.NET Project\Microservice_Demo\APIGateway\obj\Debug\net8.0\APIGateway.genruntimeconfig.cache
 E:\.NET Project\Microservice_Demo\APIGateway\obj\Debug\net8.0\ref\APIGateway.dll
+E:\.NET Project\Microservice_Demo\APIGateway\obj\Debug\net8.0\APIGateway.sourcelink.json

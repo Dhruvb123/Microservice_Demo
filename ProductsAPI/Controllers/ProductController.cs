@@ -14,12 +14,12 @@ namespace ProductsAPI.Controllers
         }
 
         [HttpGet("getSpecificProduct")]
-        public IActionResult GetProductBySpec(int id)
+        public IActionResult GetProductBySpec()
         {
             return Ok("Specific Products endpoint hit successfully");
         }
 
-        [HttpPost("addProduct")]
+        [HttpGet("addProduct")]
         public IActionResult AddProduct()
         {
             return Ok("Specific Products endpoint hit successfully");
