@@ -20,7 +20,7 @@ namespace ProductsAPI.Controllers
         }
 
         [HttpPost("addProduct")]
-        public IActionResult AddProduct(ProductModel product)
+        public IActionResult AddProduct()
         {
             return Ok("Specific Products endpoint hit successfully");
         }

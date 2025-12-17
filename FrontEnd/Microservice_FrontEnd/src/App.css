@@ -1,0 +1,87 @@
+/* Full page space background */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #2b1055, #0b031f);
+  color: #ffffff;
+}
+
+.main-container {
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #d8b4ff;
+  margin-bottom: 5px;
+}
+
+h3 {
+  color: #cfc3ff;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* API layout */
+.api-call-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.api-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 0 20px rgba(155, 89, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.api-box h2 {
+  color: #e0c3ff;
+  margin-bottom: 20px;
+}
+
+.api-box button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #7f00ff, #9f5cff);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.api-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #a855f7;
+}
+
+/* Result container */
+.result-container {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 25px rgba(140, 82, 255, 0.4);
+}
+
+.result-container h2 {
+  color: #f3e8ff;
+}
+
+.result-container pre {
+  background: #120726;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  text-align: left;
+  color: #c084fc;
+  font-size: 14px;
+}
